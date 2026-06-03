@@ -14,7 +14,7 @@ This application is my final project for the JavaScript 1 course. While the core
 ## How to Run Locally
 1. Clone this repository:
    git clone: https://github.com/st-ruth/GlobeRusher.git or download ZIP-file
-   
+
 2. Navigate into the project folder
    
 3. Open index.html in your browser (or use the Live Server extension in VS Code for an optimized development experience).
@@ -28,12 +28,7 @@ Currently, a small amount of CSS styling is applied directly inside the JavaScri
 A Google Lighthouse audit yielded the following metrics:
 * **Accessibility:** 100/100
 * **SEO:** 90/100
-* **Best Practices:** 77/100
-* **Performance:** 71/100
+* **Best Practices:** 100/100
+* **Performance:** 99/100
 
-The current performance score of 71 is a result of the application rendering all 250+ country cards simultaneously upon initialization. Since each card utilizes double image elements to support the CSS flip animations, this results in a heavy initial DOM load. Native HTML lazy loading has been implemented to mitigate this impact.
-
-Due to project time constraints, the following optimizations are deferred to future development:
-* **Pagination or Infinite Scroll:** Render a base threshold of 20 cards initially and load more on scroll or click to drastically reduce initial DOM size.
-* **Image Compression:** Convert the external API images to a lighter WebP format to reduce the network payload.
-* **Layout Shifts (CLS):** Set explicit width and height attributes on dynamic images to prevent the layout from shifting during render.
+For best Lighthouse score - make sure to open the live demo in incognito mode.
