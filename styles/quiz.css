@@ -1,0 +1,198 @@
+/* ==========================================================================
+    QUIZ.CSS - Spelspecifika stilar för Quizet
+   ========================================================================== */
+
+#quizView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 60px;
+    background-image: url('../assets/quiz.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--bg-dark);
+    box-sizing: border-box;
+}
+
+#quizView h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: black;
+    text-shadow: var(--text-shadow-large);
+}
+
+#quizModeMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100vw;
+    margin-bottom: 2rem;
+    padding: 25px 15px;
+    border: none;
+    background-color: var(--overlay-dark);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.category-card-icon {
+    margin-bottom: 5px;
+    font-size: 3rem;
+}
+
+.category-card-btn {
+    width: 90%;
+}
+
+/* QUESTIONS & RESULTS BOX */
+.quiz-question-box, .quiz-results-box {
+    position: relative; 
+    width: 100vw;
+    margin-bottom: 2rem;
+    padding: 45px 15px 30px 15px; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+    border-radius: 0;
+    background-color: var(--overlay-dark);
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.quiz-close-x {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, border-color 0.2s;
+    line-height: 1;
+    z-index: 10;
+}
+
+.quiz-close-x:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transform: scale(1.1);
+}
+
+.quiz-progress {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.quiz-question-flag {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-frost-border-hover);
+    border-radius: 6px;
+}
+
+.quiz-question-box h2 {
+    margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 25px;
+    margin-left: 0;
+    font-size: 1.5rem;
+    text-shadow: none;
+}
+
+/* OPTIONS GRID */
+.quiz-options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.btn-quiz-option {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid var(--color-frost-border-hover);
+    border-radius: 30px;
+    background: var(--color-frost-bg);
+    font-size: 1.05rem;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-quiz-option:not(:disabled):hover {
+    border-color: white;
+    background: var(--color-frost-bg-hover);
+}
+
+/* SPECIAL ACTION BUTTONS */
+.btn-bulk-action {
+    margin-top: 15px;
+    border: none;
+    background-color: var(--color-danger-old);
+}
+
+.btn-bulk-success {
+    background-color: var(--color-success);
+    font-size: 1rem;
+}
+
+.btn-bulk-success:hover {
+    background-color: var(--color-success-hover);
+}
+
+/* RESPONSIVE: IPAD & DESKTOP */
+@media (min-width: 768px) {
+    #quizModeMenu {
+        flex-direction: row;
+        gap: 35px;
+        padding: 30px 40px;
+        margin-bottom: 6rem;
+    }
+    
+    .quiz-question-box, .quiz-results-box {
+        padding: 40px 20px;
+        margin-bottom: 6rem;
+    }
+    
+    .quiz-close-x {
+        right: 35px; 
+    }
+    
+    .quiz-options-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #quizModeMenu, .quiz-question-box, .quiz-results-box {
+        margin-bottom: 15rem;
+    }
+}

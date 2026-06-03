@@ -1,0 +1,208 @@
+/* ==========================================================================
+    GLOBALS.CSS - Variables, global styles, layout and base components
+   ========================================================================== */
+
+/* VARIABLES */
+:root {
+    --font-primary: 'Plus Jakarta Sans', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --bg-dark: #1a1a1a;
+    --overlay-dark: rgba(0, 0, 0, 0.5);
+    --overlay-darker: rgba(0, 0, 0, 0.6);
+    --overlay-header: rgba(0, 0, 0, 0.55);
+    
+    /* General btns */
+    --color-frost-bg: rgba(255, 255, 255, 0.15);
+    --color-frost-bg-hover: rgba(255, 255, 255, 0.25);
+    --color-frost-bg-active: rgba(255, 255, 255, 0.3);
+    --color-frost-border: rgba(255, 255, 255, 0.2);
+    --color-frost-border-hover: rgba(255, 255, 255, 0.3);
+    
+    /* Color country card btns */
+    --color-btn-study-bg: #bae6fd;  /* Mjuk ljusblå */
+    --color-btn-study-hover: #7dd3fc;
+    --color-btn-pool-bg: #e9d5ff;   /* Mjuk ljuslila */
+    --color-btn-pool-hover: #d8b4fe;
+    --color-btn-now-bg: #fef08a;    /* Mjuk ljusgul */
+    --color-btn-now-hover: #fde047;
+    
+    /* Danger & Success Bulk */
+    --color-danger: rgba(128, 0, 32, 0.6);
+    --color-danger-border: rgba(128, 0, 32, 0.8);
+    --color-danger-hover: rgba(128, 0, 32, 0.85);
+    
+    --color-success: rgba(46, 204, 113, 0.5); /* Mjuk grön */
+    --color-success-border: rgba(46, 204, 113, 0.8);
+    --color-success-hover: rgba(46, 204, 113, 0.7);
+    
+    --text-shadow-medium: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    --text-shadow-small: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    --box-shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --blur-glass: blur(10px);
+}
+
+/* GENERAL LAYOUT & BODY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    letter-spacing: -1px;
+}
+
+h1 { font-size: 3rem; color: white; text-shadow: var(--text-shadow-medium); }
+h2 { margin-bottom: 30px; font-size: 0.8rem; color: white; text-shadow: var(--text-shadow-small); }
+
+header { position: absolute; top: 0; left: 0.5rem; width: 100%; padding: 15px 0; z-index: 10; }
+main { flex-grow: 1; }
+nav a { text-decoration: none; color: black; }
+.hidden { display: none !important; }
+.filterOption { cursor: pointer; }
+
+/* LOADING SPINNER */
+.spinner-container { display: flex; justify-content: center; align-items: center; width: 100%; min-height: 200px; }
+.loading-spinner { width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid #3498db; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* CATEGORY CARD & BULK BUTTONS */
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 350px;
+    padding: 30px 20px;
+    border: 1px solid var(--color-frost-border);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-card);
+    background: var(--overlay-darker);
+    backdrop-filter: var(--blur-glass);
+    -webkit-backdrop-filter: var(--blur-glass);
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.category-card:hover { border-color: rgba(255, 255, 255, 0.6); background: rgba(0, 0, 0, 0.7); transform: scale(1.03); }
+.category-card h3 { margin: 0; font-size: 1.4rem; color: white; }
+.category-card p { margin: 0 0 10px 0; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); }
+
+.btn-bulk-action, .category-card-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 25px;
+    border: 1px solid var(--color-frost-border-hover);
+    border-radius: 30px;
+    background: var(--color-frost-bg);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.btn-bulk-action:hover, .category-card-btn:hover, .category-card:hover .category-card-btn {
+    border-color: white;
+    background: var(--color-frost-bg-active);
+    transform: scale(1.02);
+}
+
+/*   3 ACTION BUTTONS  */
+.btn-save-study, 
+.btn-save-quiz, 
+.btn-quiz-now {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 18px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    color: #1a1a1a;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-save-study { background-color: var(--color-btn-study-bg); }
+.btn-save-study:hover { background-color: var(--color-btn-study-hover); transform: scale(1.02); }
+
+.btn-save-quiz { background-color: var(--color-btn-pool-bg); }
+.btn-save-quiz:hover { background-color: var(--color-btn-pool-hover); transform: scale(1.02); }
+
+.btn-quiz-now { background-color: var(--color-btn-now-bg); }
+.btn-quiz-now:hover { background-color: var(--color-btn-now-hover); transform: scale(1.02); }
+
+
+.card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+.btn-card-remove {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid var(--color-danger-border);
+    border-radius: 30px;
+    background: var(--color-danger);
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background 0.2s, transform 0.2s;
+}
+.btn-card-remove:hover {
+    background: var(--color-danger-hover);
+    transform: scale(1.02);
+}
+
+.card-actions svg, button svg {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+}
+
+/* ERRORBOX */
+.error-msg {
+    grid-column: 1 / -1; 
+    width: 100%;
+    max-width: 450px;
+    margin: 2rem auto;
+    color: white;
+    background: var(--overlay-dark); 
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--color-frost-border-hover);
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}

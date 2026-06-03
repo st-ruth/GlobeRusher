@@ -1,0 +1,104 @@
+/* ==========================================================================
+    INDEX
+   ========================================================================== */
+#startMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../assets/index.jpg');
+    background-size: cover;
+    background-position: 35% center;
+    background-repeat: no-repeat;
+}
+
+#welcomeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    background-color: var(--overlay-dark);
+    text-align: center;
+}
+
+#welcomeContainer button svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+#studyBtn, #quizBtn {
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+    margin-top: 0.6rem;
+    margin-right: 0;
+    margin-bottom: 0.6rem;
+    margin-left: 0;
+    padding: 14px 25px;
+    border: 1px solid var(--color-frost-border-hover);
+    border-radius: 30px;
+    box-sizing: border-box;
+    background: var(--color-frost-bg);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+#studyBtn:hover, #quizBtn:hover {
+    border-color: white;
+    background: var(--color-frost-bg-hover);
+    transform: scale(1.03);
+    outline: none;
+}
+
+/* RESPONSIVE: IPAD / TABLETS */
+@media (min-width: 768px) {
+    #startMenu {
+        background-position: center center;
+    }
+
+    #welcomeContainer {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        margin-bottom: 4rem; 
+        padding: 30px 40px;
+    }
+
+    #welcomeContainer h1, 
+    #welcomeContainer h2, 
+    #welcomeContainer p {
+        width: 100% !important;
+    }
+
+    #studyBtn, #quizBtn {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 300px !important;
+        margin: 1rem !important;
+    }
+}
+
+/* RESPONSIVE: DESKTOP */
+@media (min-width: 1024px) {
+    #welcomeContainer {
+        margin-bottom: 10rem; 
+    }
+}

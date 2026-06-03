@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/study.css">
+    <link rel="stylesheet" href="styles/quiz.css">
+    <link rel="stylesheet" href="styles/saved.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <title>Globerusher</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" id="homeLink" aria-label="HomePage">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="pink" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </a>
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-slash-icon lucide-slash"><path d="M22 2 2 22"/></svg>
+                </span>
+            <a href="#" id="studyLink" aria-label="StudyPage">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="blue" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            </a> 
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-slash-icon lucide-slash"><path d="M22 2 2 22"/></svg>
+                </span>
+            <a href="#" id="quizLink" aria-label="QuizPage">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="gold" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-star"><circle cx="12" cy="12" r="10"/><path d="M11.051 7.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.867l-1.156-1.152a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z"/></svg>
+            </a>
+                <span aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-slash-icon lucide-slash"><path d="M22 2 2 22"/></svg>
+                </span>
+            <a href="#" id="savedLink" aria-label="SavedPage">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="red" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pin-icon lucide-pin"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INDEX VIEW -->
+        <section id="startMenu">
+            <div id="welcomeContainer">
+                <h1>GLOBERUSHER</h1>
+                <h2>World tour without money and quiz yourself into a geography besswerwisser!</h2>
+            
+                <button id="studyBtn">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                    Study! </button>
+                <button id="quizBtn"> 
+                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-star"><circle cx="12" cy="12" r="10"/><path d="M11.051 7.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.867l-1.156-1.152a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z"/></svg>
+                    Quiz! </button>
+            </div>
+        </section>
+
+        <!-- STUDY VIEW -->
+        <section id="studyView" class="hidden">
+            <div id="studyHeaderContainer">
+                <h1>STUDY COUNTRIES</h1>
+                <p class="study-intro">Read them all or search it small(er).</p>
+                
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" placeholder="What are you looking for?">
+                    
+                    <button id="searchBtn" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-search-icon lucide-map-pin-search"><path d="M 12.248 21.969 a 1 1 0 0 1 -0.849 -0.17 C 9.539 20.193 4 14.993 4 10 a 8 8 0 0 1 16 0 C 20 10.42 19.961 10.841 19.888 11.262"/><path d="m22 22-1.88-1.88"/><circle cx="12" cy="10" r="3"/><circle cx="18" cy="18" r="3"/></svg>
+                    </button>
+                    <button id="clearSearchBtn" title="Clear search" aria-label="Clear search input">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-ccw-icon lucide-rotate-ccw"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                    </button> 
+                </div>
+
+                <div class="filter-controls-rows">
+                    <button id="filterToggle" class="dropdownTrigger" aria-label="Toggle filter options">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-wide-narrow-icon lucide-arrow-down-wide-narrow"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M11 4h10"/><path d="M11 8h7"/><path d="M11 12h4"/></svg>
+                        Filter
+                    </button>
+
+                    <button id="sortToggle" aria-label="Toggle sort options">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sliders-horizontal-icon lucide-sliders-horizontal"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg>
+                        Sort
+                    </button>
+                </div>
+
+                <button id="closeMenuBtn" class="hidden" aria-label="Close menu">✕</button>
+                
+                <div id="filterMenu" class="dropdown hidden">
+                    <div id="countriesTab" class="filterOption">Countries</div>
+                    <div id="regionsTab" class="filterOption">Regions</div>
+                    <div id="languagesTab" class="filterOption">Languages</div>
+
+                    <div id="countriesPanel" class="filterPanel hidden">
+                        <button id="selectAllCountries">Select all</button>
+                        <div id="countryCheckboxes"></div>
+                    </div>
+
+                    <div id="regionsPanel" class="filterPanel hidden">
+                        <div id="regionCheckboxes"></div>
+                    </div>
+
+                    <div id="languagesPanel" class="filterPanel hidden">
+                        <div id="languageCheckboxes"></div>
+                    </div>
+                </div>
+
+                <div id="sortMenu" class="dropdown hidden">
+                    <button class="sortOption" data-sort="name-asc">Name (A-Z)</button>
+                    <button class="sortOption" data-sort="name-desc">Name (Z-A)</button>
+                    <button class="sortOption" data-sort="population-asc">Population (Low to High)</button>
+                    <button class="sortOption" data-sort="population-desc">Population (High to Low)</button>
+                    <button class="sortOption" data-sort="area-asc">Area (Small to Large)</button>
+                    <button class="sortOption" data-sort="area-desc">Area (Large to Small)</button>
+                </div>
+        
+            </div>          
+
+            <div id="countryCardContainer"> </div>
+
+        </section>
+
+        <!-- QUIZ VIEW -->
+        <section id="quizView" class="hidden">
+            <h1>Quiztime!</h1>
+            <div id="quizCardContainer"></div>
+        </section>
+
+        <!-- SAVED VIEW -->
+        <section id="savedView" class="hidden">
+            <h1>Saved Countries</h1>
+            
+            <div id="savedCategoryMenu" class="saved-categories-grid">
+                <div id="cardOpenStudyList" class="category-card">
+                    <div class="category-icon">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+                    </div>
+                    <h2>My Study List</h2>
+                    <p id="studyListCounter">0 countries saved</p>
+                </div>
+
+                <div id="cardOpenQuizList" class="category-card">
+                    <div class="category-icon">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-star-icon lucide-circle-star"><circle cx="12" cy="12" r="10"/><path d="M11.051 7.616a1 1 0 0 1 1.909.024l.737 1.452a1 1 0 0 0 .737.535l1.634.256a1 1 0 0 1 .588 1.806l-1.172 1.168a1 1 0 0 0-.282.866l.259 1.613a1 1 0 0 1-1.541 1.134l-1.465-.75a1 1 0 0 0-.912 0l-1.465.75a1 1 0 0 1-1.539-1.133l.258-1.613a1 1 0 0 0-.282-.867l-1.156-1.152a1 1 0 0 1 .572-1.822l1.633-.256a1 1 0 0 0 .737-.535z"/></svg>
+                    </div>
+                    <h2>Ready for Quiz!</h2>
+                    <p id="quizListCounter">0 countries saved</p>
+                </div>
+            </div>
+
+            <div id="savedListContent" class="hidden">
+                <button id="btnBackToCategories" class="btn-bulk-action">← Back to Collections</button>
+                
+                <h2 id="savedListTitle">Category Name</h2>
+
+                <div id="savedBulkActions" class="bulk-actions">
+                    <button id="btnSavedMainAction" class="btn-bulk-action">Main Action</button>
+                    <button id="btnSavedClearAll" class="btn-bulk-action btn-bulk-danger"> Remove ALL
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> </button>
+                </div>
+
+                <div id="savedCardsContainer" class="country-cards-grid"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026</p>
+    </footer>   
+
+    <script src="scripts/storage.js"></script>
+    <script src="scripts/quiz.js"></script>
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>
