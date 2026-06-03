@@ -5,17 +5,18 @@ Globerusher is an interactive country dashboard where users can search and filte
 **Target group:** Fifth graders learning geography, or anyone who enjoys world trivia and quizzes.
 
 ## Links
-- **Live Demo:** [Insert URL here]
-- **GitHub Repository:** [Insert URL here]
+- **Live Demo:** https://globerusher.netlify.app/
+- **GitHub Repository:** https://github.com/st-ruth/GlobeRusher
 
 ## About the Project
 This application is my final project for the JavaScript 1 course. While the core assignment was to build an interactive dashboard, I decided to expand the scope by adding a fully functional quiz mode. The core concept was inspired by creating an educational tool that could genuinely be used in a school environment to make learning geography engaging and fun.
 
 ## How to Run Locally
 1. Clone this repository:
-   git clone [Insert Repository URL]
-2. Navigate into the project folder:
-   cd [Insert Folder Name]
+   git clone: https://github.com/st-ruth/GlobeRusher.git or download ZIP-file
+   
+2. Navigate into the project folder
+   
 3. Open index.html in your browser (or use the Live Server extension in VS Code for an optimized development experience).
 
 ## Technical Notes and Reflections:
